@@ -1,0 +1,12 @@
+.dancing{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    text-align: center;
+    margin-bottom : 20px
+  }
+
+  .tai {
+        background-color: rgb(149, 170, 163);
+        }

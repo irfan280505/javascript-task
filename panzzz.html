@@ -1,0 +1,264 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="yoga.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="tai">   
+    <div class="dancing pt-3" >
+          <h1>Register Form</h1>
+        </div>
+        <br>
+     
+    <div class="container">
+        <form class="row " >
+                <div class="col-6">
+                    <div class="mb-3">
+                      <label for="fname" class="form-label">Firstname</label>
+                      <input type="text" class="form-control" id="fname" onkeypress="first_last('fname','lerror')" required>
+                      <span id="lerror"></span>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="lname" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lname" onkeypress="first_last('lname','oerror')" required>
+                    <span id="oerror"></span>
+                </div>
+            </div>
+            
+
+            <div class="col-12">
+                    <div class="mb-3">
+                    <label for="mail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="mail" oninput="email('mail','eemail')" required>
+                    <span id="eemail"></span>
+                </div>
+            </div>
+
+                <div class="col-4 ">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label ">Phone Number</label>
+                        <input type="text" class="form-control" id="Phonenumber" aria-describedby="emailHelp"
+                         oninput="Phonenumber_('Phonenumber','error4')" required>
+                        <span id="error4"></span>
+                     </div>
+                </div>
+           
+
+            
+                <div class="col-4">
+                    <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pass" oninput="passw('pass','epass')"  required>
+                    <span id="epass"></span>
+                </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="mb-3">
+                    <label for="cpass" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cpass" oninput="C_PASSWORD_()" required>
+                    <span id="passError" ></span>
+                </div>
+            </div>
+
+            
+                <div class="col-md-6">
+                    <div class="mb-3">
+                    <label for="validationCustom03" class="form-label" oninput="validateLanguages()">Languages</label>
+                    <div>
+                        <input type="checkbox" id="l1" name="langu" value="english">
+                        <label for="l1">English</label>
+                        
+                        <input type="checkbox" id="l2" name="langu" value="tamil">
+                        <label for="l2">Tamil</label>
+                        
+                        <input type="checkbox" id="l3" name="langu" value="hindi">
+                        <label for="l3">Hindi</label>
+                        
+                        <input type="checkbox" id="l4" name="langu" value="others">
+                        <label for="l4">Others</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                    <label for="ddob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="ddob"  oninput="dob_()" required>
+                    <span id="edob"></span>
+                    <span id="dobSuccess"></span>
+                </div>
+            </div>
+
+            
+                <div class="col-md-6">
+                    <div class="mb-3">
+                    <label for="vgender" class="form-label">Gender</label><br>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label><br>
+                </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                    <label for="qualifications" class="form-label">Qualification</label>
+                    <select class="form-select" id="qualifications" oninput="validateQualifications()"  required>
+                        <option value="" disabled selected>Select your qualification</option>
+                        <option>12th</option>
+                        <option>10th</option>
+                        <option>Under graduation</option>
+                        <option>Post graduation</option>
+                    </select>
+                    <span id="qualificationsError"></span>
+                </div>
+            </div>
+
+            
+                <div class="col-12"> 
+                    <div class="mb-3">
+                    <label for="addressd" class="form-label i">Address</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" style="height: 100px" id="addressd" oninput="ADDRESS_()"  required></textarea>
+                        <span id="eaddress"></span>
+                        <span id="addresssuccess"></span>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="district" class="form-label">Select place</label>
+                        <select id="district" class="form-select" required>
+                            <option value="">Select Your District</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="coimbatore">Coimbatore</option>
+                            <option value="madurai">Madurai</option>
+                            <option value="tuticorin">Tuticorin</option>
+                            <option value="chennai">Pudukkottai</option>
+                            <option value="tiruchirappalli">Tiruchirappalli</option>
+                            <option value="salem">Salem</option>
+                            <option value="thanjavur">Thanjavur</option>
+                            <option value="kanyakumari">Kanyakumari</option>
+                            <option value="nilgiris">Nilgiris</option>
+                            <option value="virudhunagar">Virudhunagar</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="course" class="form-label">Select Course</label>
+                        <select id="course" class="form-select" required>
+                            <option value="">Select Your Course</option>
+                            <option value="btech">Bachelor of Technology (B.Tech)</option>
+                            <option value="bsc">Bachelor of Science (B.Sc)</option>
+                            <option value="ba">Bachelor of Arts (B.A)</option>
+                            <option value="mbbs">Bachelor of Medicine, Bachelor of Surgery (MBBS)</option>
+                            <option value="mtech">Master of Technology (M.Tech)</option>
+                            <option value="msc">Master of Science (M.Sc)</option>
+                            <option value="mba">Master of Business Administration (MBA)</option>
+                            <option value="bcom">Bachelor of Commerce (B.Com)</option>
+                            <option value="bca">Bachelor of Computer Applications (BCA)</option>
+                            <option value="ma">Master of Arts (M.A)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="duration" class="form-label">Select Duration</label>
+                        <select id="duration" class="form-select" required>
+                            <option value="">Select Duration</option>
+                            <option value="6_months">6 Months</option>
+                            <option value="1_year">1 Year</option>
+                            <option value="2_years">2 Years</option>
+                            <option value="3_years">3 Years</option>
+                            <option value="4_years">4 Years</option>
+                            <option value="6_years">6 Years</option>
+                            <option value="8_months">8 Months</option>
+                            <option value="9_months">9 Months</option>
+                            <option value="1_and_half_year">1.5 Years</option>
+                            <option value="2_and_half_year">2.5 Years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="college" class="form-label">Select College</label>
+                        <select id="college" class="form-select" required>
+                            <option value="">Select Your College</option>
+                            <option value="iit_madras">Indian Institute of Technology, Madras</option>
+                            <option value="anna_university">Anna University, Chennai</option>
+                            <option value="psg_tech">PSG College of Technology, Coimbatore</option>
+                            <option value="madras_university">University of Madras, Chennai</option>
+                            <option value="vellingkar">Vellore Institute of Technology, Vellore</option>
+                            <option value="srm_university">SRM Institute of Science and Technology, Chennai</option>
+                            <option value="coimbatore_institute">Coimbatore Institute of Technology, Coimbatore</option>
+                            <option value="tamil_nadu_agricultural_university">Tamil Nadu Agricultural University, Coimbatore</option>
+                            <option value="kings_college">Kings College, Kanyakumari</option>
+                            <option value="hindu_college">Hindu College, Chennai</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="university" class="form-label">Select University</label>
+                        <select id="university" class="form-select" required>
+                            <option value="">Select Your University</option>
+                            <option value="anna_university">Anna University, Chennai</option>
+                            <option value="iith">Indian Institute of Technology, Madras</option>
+                            <option value="tamil_nadu_agricultural_university">Tamil Nadu Agricultural University, Coimbatore</option>
+                            <option value="madras_university">University of Madras, Chennai</option>
+                            <option value="vellore_institute">Vellore Institute of Technology, Vellore</option>
+                            <option value="srm_university">SRM Institute of Science and Technology, Chennai</option>
+                            <option value="bharathiar_university">Bharathiar University, Coimbatore</option>
+                            <option value="anna_university_tiruchirappalli">Anna University, Tiruchirappalli</option>
+                            <option value="periyar_university">Periyar University, Salem</option>
+                            <option value="tamil_university">Tamil University, Thanjavur</option>
+                        </select>
+                    </div>
+                </div>
+
+          <!-- Photo -->
+          <div class="col-md-6">
+            <div class="mb-3">
+            <label for="photo" class="form-label">Select Photo</label>
+              <input type="file" id="photo" class="form-control" required accept=".jpg, .jpeg, .png">
+              <span id="photoError" style="display:none;color:red;font-size:12px;"></span>
+              <span id="photoSuccess" style="display:none;color:green;font-size:12px;"></span>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group">
+            <div class="col-md-8 col-md-offset-4">
+                <br>
+              <button id="submit-btn" class="btn btn-success" onclick="changecolor">Register </button>
+            </div>
+          </div> 
+        </form>
+    </div>
+    </div>
+<script src="tea.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+</html>
